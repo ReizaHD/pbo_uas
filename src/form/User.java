@@ -269,6 +269,7 @@ public class User extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Gagal update user");
         }
+        clear();
     }//GEN-LAST:event_updateBtnActionPerformed
 
     /**
