@@ -103,8 +103,28 @@ public class Database {
         }
     }
     
-    public static boolean updateUser(){
-        return false;
+    public static boolean userUpdate(String username, String pass, String selectedUser){
+        try{
+            connect();
+            stmt = conn.createStatement();
+
+            String sql = "UPDATE user SET username=?, pass=MD5(?) WHERE username=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+
+            ps.setString(1,username);
+            ps.setString(2,pass);
+            ps.setString(3,selectedUser);
+
+            ps.execute();
+
+            stmt.close();
+            conn.close();
+            return true;
+            
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
     
     

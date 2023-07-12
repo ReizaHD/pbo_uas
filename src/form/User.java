@@ -95,6 +95,11 @@ public class User extends javax.swing.JFrame {
 
         updateBtn.setText("Update");
         updateBtn.setEnabled(false);
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtnActionPerformed(evt);
+            }
+        });
 
         deleteBtn.setText("Delete");
         deleteBtn.setEnabled(false);
@@ -253,6 +258,18 @@ public class User extends javax.swing.JFrame {
         // TODO add your handling code here:
         showtable();
     }//GEN-LAST:event_refreshBtnActionPerformed
+
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+        // TODO add your handling code here:
+        String username = usernameTxt.getText();
+        String pass = String.valueOf(passwordTxt.getPassword());
+        if(Database.userUpdate(username, pass, selectedUsername)){
+            JOptionPane.showMessageDialog(null,"Berhasil update user");
+            showtable();
+        }else {
+            JOptionPane.showMessageDialog(null, "Gagal update user");
+        }
+    }//GEN-LAST:event_updateBtnActionPerformed
 
     /**
      * @param args the command line arguments
