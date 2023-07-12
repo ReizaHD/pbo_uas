@@ -257,6 +257,7 @@ public class Transaksi extends javax.swing.JFrame {
             n.printStackTrace();
             JOptionPane.showMessageDialog(null, "Masukkan bilangan yang sesuai di kolom Stok");
         }
+        clear();
         showtable();
     }//GEN-LAST:event_submitBtnActionPerformed
 
