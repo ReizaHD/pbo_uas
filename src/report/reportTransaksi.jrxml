@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15093586-e769-4c37-9afc-4b112ea7344d">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from transaksi]]>
+	</queryString>
+	<field name="no" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="user" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_brg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_brg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok_after" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="47" uuid="f7e50bc9-0994-49c5-9a59-17f71f35a2af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[TOKO ABC]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="78" width="555" height="1" uuid="386a1033-450f-4049-a095-4771f78baac0"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="47" width="555" height="32" uuid="eeb3bad9-fbf4-4b37-882f-b7544cca9f55"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Laporan Transaksi Barang]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="384" y="6" width="171" height="20" uuid="c7537219-a3bf-4b8e-9f26-d35e2e35dd50"/>
+				<textElement>
+					<font size="15"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="261" y="6" width="114" height="20" uuid="79ae4975-6ad1-49b7-bf65-21c77881f495"/>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Tanggal Cetak :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="447" y="0" width="108" height="20" uuid="a113d108-85ae-47df-bd8b-fc87643c9ff3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="375" y="0" width="72" height="20" uuid="6f619481-bfcc-484b-ad4b-58ac4ac00783"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="327" y="0" width="48" height="20" uuid="3fd01905-b4f6-46b7-afd7-f02d22510ad4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="250" y="0" width="77" height="20" uuid="55e4e49e-680b-42b9-8e5f-956ad487057f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="188" y="0" width="62" height="20" uuid="26ede33c-5491-4432-9fd7-8961f1726375"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="109" y="0" width="79" height="20" uuid="f80a0a3a-e2be-4868-a170-5378293fe12a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="30" y="0" width="79" height="20" uuid="8cb8bc02-7798-446f-ab9f-bb2f453ab38e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="0" width="29" height="20" uuid="d17f8fe1-4104-4432-a464-be6739b19390"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="3c3100ae-2318-4d70-a492-66faaa615ecd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="79" height="20" uuid="d7994cca-fc75-4c84-b8c3-75ccea31b0ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="109" y="0" width="79" height="20" uuid="69e70124-0d06-406d-b4ea-ab68ffcf6d5d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="0" width="62" height="20" uuid="b0863df8-e459-4c81-872c-db08d2e44695"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="77" height="20" uuid="d2673642-7cad-4ede-a5e3-24d6e7541ca1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="48" height="20" uuid="bbe99f41-b958-4516-99eb-f4f961777aab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="72" height="20" uuid="0206095d-e5b6-4f68-925f-8d1da984bdf6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Stok Setelah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="0" width="108" height="20" uuid="af7ce5ef-9a4b-4f42-b5d1-772db11b7873"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Waktu Transaksi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<rectangle>
+				<reportElement x="375" y="0" width="72" height="49" uuid="5627cbd5-c55d-4fe6-97f9-eb253e4aa2cf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="0" width="108" height="49" uuid="d044d2bd-7788-4c56-b84d-ca09c9dc38e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="327" y="0" width="48" height="49" uuid="0d337636-1c24-4d2c-ae04-8f3d8e069b37"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="250" y="0" width="77" height="49" uuid="231c2401-8c4d-495b-b84d-0a513807c145"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="188" y="0" width="62" height="49" uuid="28bd3061-66e0-4534-8934-e3fc7413d81a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="109" y="0" width="79" height="49" uuid="ce906584-0e73-4aa8-912e-5d7b1c467f5f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="30" y="0" width="79" height="49" uuid="42f21b15-2f73-4d37-801a-d2fd34918002"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="0" width="29" height="49" uuid="e6f6f4f9-cbd9-4758-8a98-35f34ac63ba5"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="49" uuid="b7b85169-170a-44f4-a158-aa136c58321c"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="79" height="49" uuid="1f65cb92-4e6c-4932-b13c-16fded9c7c56"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="79" height="49" uuid="6d4ee05d-4367-4379-97dc-4c989b352416"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="0" width="62" height="49" uuid="85f9c171-21fa-4c69-92c2-d6bc52bd6e6d"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kd_brg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="77" height="49" uuid="4ea1ecc6-be27-45c9-b07c-b66d879d0389"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nm_brg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="48" height="49" uuid="b753e5e6-47d4-4b69-90a9-5f8a7bb41820"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stok}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="72" height="49" uuid="ebbb8966-fe5c-47a1-845c-eeca63580cc7"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stok_after}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="447" y="0" width="108" height="49" uuid="74179607-f07d-433f-a2c9-311d7c70f225"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

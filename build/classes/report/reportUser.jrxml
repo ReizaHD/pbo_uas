@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e81313a1-8042-493b-9809-44275a859472">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from user]]>
+	</queryString>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pass" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reg_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="last_login" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="207" y="0" width="140" height="41" uuid="affd747f-1791-4a82-be37-7931807703f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[TOKO ABC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="38" width="140" height="41" uuid="b0448198-7232-4239-97c4-4a0b935a7325"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Data User]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<elementGroup>
+				<rectangle>
+					<reportElement x="220" y="41" width="100" height="20" uuid="4c3861b1-35ac-4e1a-a9ee-adc25c22aed5"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="220" y="41" width="100" height="20" uuid="9c0513e2-22b9-4a05-a61f-341dd4eaf44e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Tanggal Registrasi]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement x="120" y="41" width="100" height="20" uuid="71b9b65f-2c29-4612-b328-c71971c146a6"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="120" y="41" width="100" height="20" uuid="24e7baae-aff8-48f3-b670-c894a7a89d2d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Username]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement x="320" y="41" width="100" height="20" uuid="dd8737c3-9d37-4843-817a-113fb7104c6a"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="320" y="41" width="100" height="20" uuid="7bc25e26-0e02-4a27-ac3c-65442a23b260"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Terakhir Login]]></text>
+				</staticText>
+			</elementGroup>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<elementGroup>
+				<rectangle>
+					<reportElement x="120" y="0" width="100" height="20" uuid="fe21a9b1-24ac-452b-a52c-1286be8fc079"/>
+				</rectangle>
+				<textField>
+					<reportElement x="120" y="0" width="100" height="20" uuid="be404bf4-179d-4e4d-a2cc-a8754ef96cb6"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement x="220" y="0" width="100" height="20" uuid="44128560-8003-45ee-b7f2-38217536fa8a"/>
+				</rectangle>
+				<textField>
+					<reportElement x="220" y="0" width="100" height="20" uuid="e640e7b1-a312-4e32-8f2f-7d804a923640"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{reg_date}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement x="320" y="0" width="100" height="20" uuid="35ddb9ef-0298-40c3-b4f3-7b76fe0392f2"/>
+				</rectangle>
+				<textField>
+					<reportElement x="320" y="0" width="100" height="20" uuid="1aed2c8f-ccee-4df6-9a36-ecdc5f5777e9"/>
+					<textElement verticalAlignment="Middle">
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{last_login}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
