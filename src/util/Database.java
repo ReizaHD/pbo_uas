@@ -103,6 +103,10 @@ public class Database {
         }
     }
     
+    public static boolean updateUser(){
+        return false;
+    }
+    
     
     public static boolean deleteUser(String username){
         try {

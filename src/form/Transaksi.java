@@ -61,6 +61,7 @@ public class Transaksi extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         userLabel = new javax.swing.JLabel();
         refreshBtn = new javax.swing.JButton();
+        clearBtn = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -82,6 +83,8 @@ public class Transaksi extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Jenis Transaksi :");
+
+        kodeTxt.setEditable(false);
 
         jLabel2.setText("Jumlah Stok");
 
@@ -120,6 +123,13 @@ public class Transaksi extends javax.swing.JFrame {
         refreshBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshBtnActionPerformed(evt);
+            }
+        });
+
+        clearBtn.setText("Clear");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtnActionPerformed(evt);
             }
         });
 
@@ -162,7 +172,10 @@ public class Transaksi extends javax.swing.JFrame {
                                     .addComponent(kodeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(stokTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(submitBtn)))
-                            .addComponent(printBtn, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(printBtn, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(clearBtn)
+                                .addGap(20, 20, 20))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(refreshBtn)
@@ -196,6 +209,8 @@ public class Transaksi extends javax.swing.JFrame {
                             .addComponent(stokTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(clearBtn)
                         .addGap(18, 18, 18)
                         .addComponent(printBtn))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -270,6 +285,11 @@ public class Transaksi extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+        // TODO add your handling code here:
+        clear();
+    }//GEN-LAST:event_clearBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -339,7 +359,6 @@ public class Transaksi extends javax.swing.JFrame {
             } catch(Exception e){
                 
             }
-            
             tableData.setModel(model);
     }
     
@@ -367,6 +386,7 @@ public class Transaksi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton clearBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
